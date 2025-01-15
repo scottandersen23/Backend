@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment, LikeDislike, Tag, Subscriber, Advertisement, PageView
 from .forms import PostForm, CommentForm, SubscriptionForm
-from django.utils.timezone import now
+from .utils.timezone import now
 
 # Blog Views
 def post_list(request):
