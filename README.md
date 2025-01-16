@@ -1,5 +1,4 @@
 # Getting Started with Django... 
-Building for AI workloads: efficient scaling, storage, and integration between software services. 
 
 Two foundational features for Django apps are **models** and **views**. These form the core of how Django apps function and are essential for nearly every app you create.
 
