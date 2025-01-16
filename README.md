@@ -1,4 +1,4 @@
-# Getting Started... 
+# Getting Started with Django... 
 Building for AI workloads: efficient scaling, storage, and integration between software services. 
 
 Two foundational features for Django apps are **models** and **views**. These form the core of how Django apps function and are essential for nearly every app you create.
@@ -98,7 +98,7 @@ Yes, in addition to **models** and **views**, there are other foundational compo
 
 ---
 
-### **1. URLs (Routing Layer)**
+### **3. URLs (Routing Layer)**
 **What it is:**  
 URLs connect incoming user requests to the appropriate views in your app.
 
@@ -123,7 +123,7 @@ Without URL routing, Django wouldn’t know which view to call for a given reque
 
 ---
 
-### **2. Templates (Presentation Layer)**
+### **4. Templates (Presentation Layer)**
 **What it is:**  
 Templates are used to render HTML pages dynamically by combining static HTML with data from views.
 
@@ -150,7 +150,7 @@ Templates make it possible to build user interfaces with dynamic content.
 
 ---
 
-### **3. Forms (User Interaction Layer)**
+### **5. Forms (User Interaction Layer)**
 **What it is:**  
 Forms handle user input, such as login credentials, search queries, or registration data.
 

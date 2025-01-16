@@ -1,3 +1,5 @@
+## Modular vs Monolithic Application Structure:
+
 Splitting **users**, **products**, and **orders** into separate apps involves creating distinct Django apps for each of these domains. Each app will focus solely on its specific functionality while interacting with others through well-defined relationships and APIs. Here's how this might look:
 
 ---

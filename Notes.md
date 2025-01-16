@@ -1,3 +1,4 @@
+## Django
 A Django application is typically composed of several key files and directories that together enable the functionality of a web application. Here’s an overview of the main files and the role of **URLs**, **views**, and **models**:
 
 ---
