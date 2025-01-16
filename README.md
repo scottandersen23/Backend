@@ -93,7 +93,9 @@ Views define what users (or APIs) can do with your app, making them integral for
 These two features work in tandem to make apps functional and dynamic. Together, they serve as the foundation of almost every Django application.
 
 
-Yes, in addition to **models** and **views**, there are other foundational components of Django apps that play crucial roles in making the app fully functional. These include **URLs**, **templates**, and **forms**, along with **static files** and **middleware**. Here's an overview of what you might have missed:
+In addition to **models** and **views**, there are other foundational components of Django apps that play crucial roles in making the app fully functional. These include **URLs**, **templates**, and **forms**, along with **static files** and **middleware**. 
+
+Here's an overview:
 
 ---
 
