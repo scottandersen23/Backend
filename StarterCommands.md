@@ -1,3 +1,5 @@
+# Useful Terminal Commands
+
 Here are the terminal commands to create and start a Django application on a Mac:
 
 ---
