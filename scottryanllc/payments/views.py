@@ -7,4 +7,4 @@ def payment(request, pk):
 
 
 def payments(request):
-    return HttpResponse('Here is your payment history.')
+    return HttpResponse('Here is your Payment History.')
