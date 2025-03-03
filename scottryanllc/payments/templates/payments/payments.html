@@ -1,6 +1,18 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<h1>Payments Template</h1>
-<p>This app in the project handles payment information.</p>
+
+<h1>Payments</h1>
+
+<ul>
+    {% for payment in payments %}
+    <li>Title: <a href="{% url 'payment' payment.id %}">{{payment.title}}</a> --- {{payment.description}}</li>
+    {% endfor %}
+</ul>
+
+
+
+
+
+
 {% endblock content %}
