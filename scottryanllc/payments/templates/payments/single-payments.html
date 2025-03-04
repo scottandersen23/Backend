@@ -2,6 +2,11 @@
 
 {% block content %}
 <h1>{{payment.title}}</h1>
+<hr>
+{% for tag in tags %}
+<span style="border:2px solid orangered">{{tag}}</span>
+{% endfor %}
+<hr>
 <br>
 <p>{{payment.description}}</p>
 {% endblock %}

@@ -1,18 +1,24 @@
 {% extends 'main.html' %}
-
 {% block content %}
 
 <h1>Payments</h1>
 
-<ul>
+
+<table>
+    <tr>
+        <th>Created</th>
+        <th></th>
+        <th>Description</th>
+        <th>ID</th>
+    </tr>
     {% for payment in payments %}
-    <li>Title: <a href="{% url 'payment' payment.id %}">{{payment.title}}</a> --- {{payment.description}}</li>
+    <tr>
+        <td>{{payment.created}}</td>
+        <td><a href="{% url 'payment' payment.id %}">{{payment.title}}</a></td>
+        <td>{{payment.description}}</td>
+        <td>{{payment.id}}</td>
+    </tr>
     {% endfor %}
-</ul>
-
-
-
-
-
+</table>
 
 {% endblock content %}
