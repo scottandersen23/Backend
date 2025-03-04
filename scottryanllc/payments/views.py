@@ -24,7 +24,7 @@ def createPayment(request):
         form = PaymentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(payment)
+            return redirect('payments')
         
     context = {'form': form}
     return render(request, "payments/payment_form.html", context)
