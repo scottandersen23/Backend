@@ -28,3 +28,16 @@ def createPayment(request):
         
     context = {'form': form}
     return render(request, "payments/payment_form.html", context)
+
+def updatePayment(request):
+    payment = Payment.objects.get(id='pk')
+    form = PaymentForm(instance=payment)
+
+    if request.method == 'POST':
+        form = PaymentForm(request.POST, instance=payment)
+        if form.is_valid():
+            form.save()
+            return redirect('payments')
+        
+    context = {'form': form}
+    return render(request, "payments/payment_form.html", context)

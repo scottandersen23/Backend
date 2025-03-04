@@ -7,16 +7,16 @@
 <table>
     <tr>
         <th>Created</th>
-        <th></th>
         <th>Description</th>
-        <th>ID</th>
+        <th></th>
+        <th></th>
     </tr>
     {% for payment in payments %}
     <tr>
         <td>{{payment.created}}</td>
-        <td><a href="{% url 'payment' payment.id %}">{{payment.title}}</a></td>
         <td>{{payment.description}}</td>
-        <td>{{payment.id}}</td>
+        <td><a href="{% url 'payment' payment.id %}">View</a></td>
+        <td><a href="{% url 'payment' payment.id %}">Edit</a></td>
     </tr>
     {% endfor %}
 </table>
