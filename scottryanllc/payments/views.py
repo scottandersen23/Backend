@@ -3,13 +3,15 @@ from django.http import HttpResponse
 from .models import Payment
 from .forms import PaymentForm
 
-paymentsList = [{'id': '1','title': "Payments Website", 'description': 'Full Stack Django Project'},{'id': '2','title': "Blog", 'description': 'Developing Software Applications'},{'id': '3','title': "Personal Portfolio", 'description': 'Professional Projects Folder'}]
+paymentsList = [{'id': '1','first_name': "Ari", 'last_name': 'Doodle', 'amount':'$100', 'cc': 'Chase Freedom', 'description':'memory foam dog bed'},
+                {'id': '2','first_name': "Nicole", 'last_name': 'Cabrera', 'amount':'$250', 'cc': 'American Express', 'description':'lashes, brows, nails and toes'},
+                {'id': '3','first_name': "Cooper", 'last_name': 'Andersen', 'amount':'$100', 'cc': 'Paypal', 'description':'body scrub and facial'}]
 
 def payment(request, pk):
     paymentObj = Payment.objects.get(id=pk)
-    tags = paymentObj.tags.all()
+    cc = paymentObj.cc.all()
     print('paymentObj', paymentObj)
-    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'tags': tags})
+    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'cc': cc})
 
 
 def payments(request):
@@ -29,8 +31,8 @@ def createPayment(request):
     context = {'form': form}
     return render(request, "payments/payment_form.html", context)
 
-def updatePayment(request):
-    payment = Payment.objects.get(id='pk')
+def updatePayment(request,pk):
+    payment = Payment.objects.get(id=pk)
     form = PaymentForm(instance=payment)
 
     if request.method == 'POST':
