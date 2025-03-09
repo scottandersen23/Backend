@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Payment, Tag
+from .models import Payment, CC
 
 admin.site.register(Payment)
-admin.site.register(Tag)
+admin.site.register(CC)
