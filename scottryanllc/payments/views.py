@@ -3,20 +3,20 @@ from django.http import HttpResponse
 from .models import Payment
 from .forms import PaymentForm
 
-paymentsList = [{'id': '1','first_name': "Ari", 'last_name': 'Doodle', 'amount':'$100.00', 'cc': 'Chase Freedom', 'description':'memory foam dog bed'},
-                {'id': '2','first_name': "Nicole", 'last_name': 'Cabrera', 'amount':'$250.00', 'cc': 'American Express', 'description':'lashes, brows, nails and toes'},
-                {'id': '3','first_name': "Cooper", 'last_name': 'Andersen', 'amount':'$75.00', 'cc': 'Paypal', 'description':'body scrub and facial'}]
+paymentsList = [{'id': '1','first_name': "Ari", 'last_name': 'Doodle', 'amount':'$100.00', 'CreditCard': 'Chase Freedom', 'description':'memory foam dog bed'},
+                {'id': '2','first_name': "Nicole", 'last_name': 'Cabrera', 'amount':'$250.00', 'CreditCard': 'American Express', 'description':'lashes, brows, nails and toes'},
+                {'id': '3','first_name': "Cooper", 'last_name': 'Andersen', 'amount':'$75.00', 'CreditCard': 'Paypal', 'description':'body scrub and facial'}]
 
 def payment(request, pk):
     paymentObj = Payment.objects.get(id=pk)
-    CC = paymentObj.cc.all()
+    creditcard = paymentObj.CreditCard.all()
     print('paymentObj', paymentObj)
-    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'CC': CC})
+    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'CreditCard':creditcard})
 
 
 def payments(request):
     payments = Payment.objects.all()
-    context = {'payments': payments}
+    context = {'payment': payments}
     return render(request, 'payments/payments.html', context)
 
 def createPayment(request):

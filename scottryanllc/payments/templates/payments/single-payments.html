@@ -1,10 +1,10 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<h1>{{payment.title}}</h1>
+<h1>{{payment.description}}</h1>
 <hr>
-{% for cc in CC %}
-<span style="border:2px solid orangered">{{CC}}</span>
+{% for CreditCard in paymentList %}
+<span style="border:2px solid orangered">{{CreditCard}}</span>
 {% endfor %}
 <hr>
 <br>

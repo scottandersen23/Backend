@@ -10,12 +10,12 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Amount</th>
-        <th>CC</th>
+        <th>Credit Card</th>
         <th>Description</th>
         <td></td>
         <td></td>
     </tr>
-    {% for payment in payments %}
+    {% for txn in paymentList %}
     <tr>
         <td>{{payment.first_name}}</td>
         <td>{{payment.last_name}}</td>
