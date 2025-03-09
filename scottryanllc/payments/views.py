@@ -11,7 +11,7 @@ def payment(request, pk):
     paymentObj = Payment.objects.get(id=pk)
     CC = paymentObj.cc.all()
     print('paymentObj', paymentObj)
-    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'cc': CC})
+    return render(request, 'payments/single-payments.html', {'payment':paymentObj, 'CC': CC})
 
 
 def payments(request):
